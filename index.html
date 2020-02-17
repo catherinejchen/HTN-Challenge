@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+        <link href="StyleSheet.css" rel="StyleSheet" type="text/css">
+    </head>
+
+    <body id="background" class="container">
+        <div class="m-loader">
+        </div>
+        <div id="particleCanvas-Blue"></div>
+        <div id="particleCanvas-White"></div>
+        <div class="Box">
+            <div id="background-page" class="container padding-page center">
+                <div class="center-box">
+                    <div class="padding-top-thirty margin-30 center-content">
+                        <img src="logo.png" id="logo" alt="Hack the North Logo">
+                    </div>
+                    <!-- <div class="center-content margin-bottom-thirty">
+                        <img src="letter-logo.png" id="letter-logo" class="letter-logo-img" alt="Hack the north Letter Logo">
+                    </div> -->
+                    <div class="center-content">
+                        <p class="letter-logo">Hack the North</p> 
+                    </div>
+                    <div class="center-content padding-bottom-thirty">
+                        <p class="caption">
+                            LOGIN
+                        </p>
+                    </div>
+                    <div class="center-content">
+                        <form class="padding-bottom-thirty">
+                            <!-- <div>
+                                <div>
+                                    <input required type="text" id="username" name="username" placeholder="username">
+                                </div>
+                                <div>
+                                    <input required type="text" id="password" name="password" placeholder="password">
+                                </div>
+                            </div> -->
+                            <div class="padding-bottom-thirty input-icons">
+                                <div>
+                                <i class="fa fa-user"></i>
+                                <input required type="text" id="username" name="username" placeholder="username">
+                                </div>
+                                <div>
+                                <i class="fa fa-lock"></i>
+                                <input required type="text" id="password" name="password" placeholder="password">
+                                </div>
+                            </div>
+                            <!-- <input type="tel" pattern="^[0-9-+\s()]*$" id="num" name="phone number" placeholder="phone number"> -->
+                            <button class="submit" onclick="window.location.href = './main.html';">Submit</button>
+                        <!-- <div style="display: none;" class="thankyou_message">
+                            <p class="info-text-font">Thanks for contacting me! I will get back to you shortly!</p>
+                        </div> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="Script.js"></script>
+    </body>
+</html>
