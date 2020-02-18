@@ -24,6 +24,13 @@ a{
     background-image: linear-gradient(to bottom right, #F1A8A3, #4CB1D4);
 }
 
+#background-index{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(61, 171, 213);
+    background-image: linear-gradient(to bottom right, #F1A8A3, #4CB1D4);
+}
+
 #logo{
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */
