@@ -45,7 +45,7 @@ a{
 
 #background-page{
     border-radius: 10px;
-    height: 81vh;
+    height: 86vh;
     background-color: rgb(255, 255, 255, 0.75)
 }
 
@@ -104,7 +104,7 @@ a{
 }
 
 .outer-page{
-    margin: 50px;
+    margin: 30px;
 }
 
 .padding-page{
@@ -216,7 +216,7 @@ input[type=text]{
 
 .arrow-container {
     position: absolute;
-    bottom: -175px;
+    bottom: -155px;
     left: calc(50%);
     transform: translate(-50%, -50%);
 }
@@ -342,8 +342,8 @@ input[type=text]{
 }
 
 .info{
-    margin-top: -50px;
-    padding-top: 50px;
+    margin-top: 0;
+    padding-top: 1px;
 }
 
 .pfp{
