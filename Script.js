@@ -219,3 +219,42 @@ particlesJS("particleCanvas-White", {
     },
     retina_detect: true
 });
+
+
+// Arrow
+$.fn.characterize = function (wrapper, options) {
+    var txt = this.text(),
+        self = this;
+  
+    this.empty();
+  
+    wrapper = wrapper || '<span />';
+    options = options || {};
+  
+    Array.prototype.forEach.call(txt, function (c) {
+      options.text = c;
+      self.append($(wrapper, options));
+    });
+  };
+  
+  
+  function animateHeader() {
+    var wlc = $('#header-text');
+  
+    wlc.characterize('<span />', {
+      class: 'fd',
+      css: {
+        opacity: 0
+      }
+    });
+    
+    wlc.css('opacity', 1);
+  
+    $('.fd').each(function (i) {
+      $(this).delay(i* 750).animate({opacity: 1}, (i + 1) * 300);
+    });
+  }
+  
+  
+  animateHeader();
+  

@@ -10,14 +10,14 @@
         <link href="StyleSheet.css" rel="StyleSheet" type="text/css">
     </head>
 
-    <body id="background" class="container">
+    <body id="background">
         <div class="m-loader">
         </div>
         <div id="particleCanvas-Blue"></div>
         <div id="particleCanvas-White"></div>
-        <div class="Box">
-            <div id="background-page" class="container padding-page center">
-                <div class="center-box">
+        <div class="Box outer-page">
+            <div id="background-page" class="container padding-page">
+                <div class="top-center-box">
                     <div class="padding-top-thirty margin-30 center-content">
                         <img src="profile-pic.jpg" class="pfp" alt="Profile Picture">
                     </div>
@@ -27,34 +27,69 @@
                     <div class="center-content">
                         <p class="letter-logo">Catherine Chen</p> 
                     </div>
-                    <div class="center-content padding-bottom-thirty">
+                    <div class="center-content padding-top-ten padding-bottom-thirty">
                         <p class="caption">
                             ID: 20819176 | Hacker
                         </p>
                     </div>
-                    <div class="center-content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse cillum dolore eu fugiat nulla pariatur.
+                    <div>
+                        <p class="center-content">
+                            insert bio here~ The best bios are often concise (around
+                            200–300 words), so you don't have a lot of room to play around.
+                            But a single sentence that tees your reader up and provides
+                            context for the accomplishments that follow could make the rest
+                            of your bio that much more persuasive.
                         </p>
                     </div>
-                    
-                    <!-- only for hackers -->
-                    <div>
-                        Workshops Attended: 0
-                    </div>
-                    <!-- only for sponsors -->
-                    <div>
-                        Sponsor Company: Google
-                        Sponsor Company Link: https://www.google.com
-                    </div>
-                    <div>
-
-                    </div>
+                    <a href="#information" class="arrow-container no-decoration">
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <span class="arrow-text">Scroll down</span>
+                    </a>
                 </div>
+            </div>
+            <div id="information">
+                <!-- only for hackers -->
+                <div class="margin-top-fifty">
+                    <p class="attended-title padding-left-thirty">
+                        Workshops Attended:
+                    </p>
+                    <p class="attended-num center-content">
+                        0
+                    </p>
+                </div>
+                <div>
+                    <p class="attended-title padding-left-thirty">
+                        Sponsor Company:
+                    </p>
+                    <p class="attended-num center-content">
+                        Google
+                    </p>
+                    <p class="attended-title margin-top-thirty padding-left-thirty">
+                        Sponsor Company Link: https://www.google.com
+                    </p>
+                </div>
+                <!-- <div id="background-info" class="padding-top-thirty">
+                    <p class="attended-title padding-left-thirty">
+                        Workshops Attended:
+                    </p>
+                    <p class="attended-num center-content">
+                        0
+                    </p>
+                </div> -->
+                <!-- only for sponsors -->
+                <!-- <div id="background-info" class="padding-top-thirty">
+                    <p class="attended-title padding-left-thirty">
+                        Sponsor Company:
+                    </p>
+                    <p class="attended-num center-content">
+                        Google
+                    </p>
+                    <p>
+                        Sponsor Company Link: https://www.google.com
+                    </p>
+                </div> -->
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
