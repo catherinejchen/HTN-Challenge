@@ -1,3 +1,17 @@
+function httpGet(theUrl) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+test = JSON.parse(httpGet("https://hackthenorth.netlify.com/api/fe-challenge-attendee"));
+
+console.log(test);
+console.log("\n");
+console.log(test.name)
+console.log(test.phone_number);
+
 particlesJS("particleCanvas-Blue", {
     particles: {
         number: {
