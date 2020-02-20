@@ -1,16 +1,61 @@
-function httpGet(theUrl) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
+// accessing data
+window.addEventListener('load', function () {
+    function httpGet(theUrl) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
 
-test = JSON.parse(httpGet("https://hackthenorth.netlify.com/api/fe-challenge-attendee"));
+    test = JSON.parse(httpGet("https://hackthenorth.netlify.com/api/fe-challenge-attendee"));
 
-console.log(test);
-console.log("\n");
-console.log(test.name)
-console.log(test.phone_number);
+    console.log(test);
+    console.log("\n");
+    console.log(test.name)
+    console.log(test.phone_number);
+
+    if(test == null){
+        document.getElementById("profile").style.display = "none";
+    }
+    else{
+        document.getElementById("profile").style.display = "block";
+    }
+
+    document.getElementById("pfp").src = test.profile_pic;
+    document.getElementById("name").innerHTML = test.name;
+    document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: " + test.checked_in + " | " + test.type;
+    document.getElementById("bio").innerHTML = test.bio;
+
+    document.getElementById("num-workshops").innerHTML = test.num_workshops_attended;
+
+    document.getElementById("company").innerHTML = test.sponsor_company;
+    document.getElementById("company-link").innerHTML = test.sponsor_company_link;
+
+    document.getElementById("next-shift").innerHTML = test.next_shift;
+
+    document.getElementById("phone-num").innerHTML = test.phone_number;
+
+    // document.getElementById("pfp").src = test.profile_pic;
+    // document.getElementById("name").innerHTML = test.name;
+    // if (test.checked_in == true){
+    //     document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
+    // }
+    // else if(test.checked_in == false){
+    //     document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
+    // }
+    // document.getElementById("bio").innerHTML = test.bio;
+
+    // document.getElementById("num-workshops").innerHTML = test.num_workshops_attended;
+
+    // document.getElementById("company").innerHTML = test.sponsor_company;
+    // document.getElementById("company-link").innerHTML = test.sponsor_company_link;
+
+    // document.getElementById("next-shift").innerHTML = test.next_shift;
+
+    // document.getElementById("phone-num").innerHTML = test.phone_number;
+})
+
+// particles
 
 particlesJS("particleCanvas-Blue", {
     particles: {
