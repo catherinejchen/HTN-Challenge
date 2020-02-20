@@ -346,6 +346,23 @@ input[type=text]{
     font-weight: 550;
 }
 
+.shift-date{
+    /* color: #1a4961; */
+    color: black;
+    font-weight: 800;
+    font-size: 20px;
+    opacity: 0.3;
+    margin: 10px;
+}
+
+.sponsor-link{
+    margin: 15px;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+    opacity: 0.3;
+}
+
 .phone-date{
     /* color: #1a4961; */
     color: black;

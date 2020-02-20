@@ -9,21 +9,57 @@ window.addEventListener('load', function () {
 
     test = JSON.parse(httpGet("https://hackthenorth.netlify.com/api/fe-challenge-attendee"));
 
-    console.log(test);
-    console.log("\n");
-    console.log(test.name)
-    console.log(test.phone_number);
-
     if(test == null){
         document.getElementById("profile").style.display = "none";
+        document.getElementById("null-profile").style.display = "block";
     }
     else{
         document.getElementById("profile").style.display = "block";
+        document.getElementById("null-profile").style.display = "none";
+    }
+
+    if(test.type == "hacker"){
+        document.getElementById("hacker").style.display = "block";
+        document.getElementById("workshop").style.display = "block";
+        document.getElementById("sponsor").style.display = "none";
+        document.getElementById("volunteer").style.display = "none";
+        document.getElementById("organizer").style.display = "none";
+        document.getElementById("call").style.display = "none";
+    }
+    else if(test.type == "sponsor"){
+        document.getElementById("hacker").style.display = "none";
+        document.getElementById("workshop").style.display = "none";
+        document.getElementById("sponsor").style.display = "block";
+        document.getElementById("volunteer").style.display = "none";
+        document.getElementById("organizer").style.display = "none";
+        document.getElementById("call").style.display = "none";
+    }
+    else if(test.type == "volunteer"){
+        document.getElementById("hacker").style.display = "none";
+        document.getElementById("workshop").style.display = "none";
+        document.getElementById("sponsor").style.display = "none";
+        document.getElementById("volunteer").style.display = "block";
+        document.getElementById("organizer").style.display = "none";
+        document.getElementById("call").style.display = "none";
+    }
+    else if(test.type == "organizer"){
+        document.getElementById("hacker").style.display = "none";
+        document.getElementById("workshop").style.display = "none";
+        document.getElementById("sponsor").style.display = "none";
+        document.getElementById("volunteer").style.display = "none";
+        document.getElementById("organizer").style.display = "block";
+        document.getElementById("call").style.display = "block";
     }
 
     document.getElementById("pfp").src = test.profile_pic;
     document.getElementById("name").innerHTML = test.name;
-    document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: " + test.checked_in + " | " + test.type;
+    if (test.checked_in == true){
+        document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
+    }
+    else if(test.checked_in == false){
+        document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
+    }
+    // document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: " + test.checked_in + " | " + test.type;
     document.getElementById("bio").innerHTML = test.bio;
 
     document.getElementById("num-workshops").innerHTML = test.num_workshops_attended;
@@ -31,28 +67,10 @@ window.addEventListener('load', function () {
     document.getElementById("company").innerHTML = test.sponsor_company;
     document.getElementById("company-link").innerHTML = test.sponsor_company_link;
 
-    document.getElementById("next-shift").innerHTML = test.next_shift;
+    var date = new Date(test.next_shift)
+    document.getElementById("next-shift").innerHTML = date;
 
     document.getElementById("phone-num").innerHTML = test.phone_number;
-
-    // document.getElementById("pfp").src = test.profile_pic;
-    // document.getElementById("name").innerHTML = test.name;
-    // if (test.checked_in == true){
-    //     document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
-    // }
-    // else if(test.checked_in == false){
-    //     document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
-    // }
-    // document.getElementById("bio").innerHTML = test.bio;
-
-    // document.getElementById("num-workshops").innerHTML = test.num_workshops_attended;
-
-    // document.getElementById("company").innerHTML = test.sponsor_company;
-    // document.getElementById("company-link").innerHTML = test.sponsor_company_link;
-
-    // document.getElementById("next-shift").innerHTML = test.next_shift;
-
-    // document.getElementById("phone-num").innerHTML = test.phone_number;
 })
 
 // particles

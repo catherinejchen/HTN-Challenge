@@ -16,6 +16,15 @@
         <div id="particleCanvas-Blue"></div>
         <div id="particleCanvas-White"></div>
         <div class="Box outer-page">
+                <div id="background-page" class="container padding-page">
+                    <div class="center-content center-box">
+                        PROFILE NOT FOUND
+                        <br>
+                        <br>
+                        please return to the login page and try again
+                    </div>
+                </div>
+            </div>
             <div id="profile">
                 <div id="background-page" class="container padding-page">
                     <div class="top-center-box">
@@ -28,6 +37,7 @@
                         <div class="center-content">
                             <p id="name" class="letter-logo">Catherine Chen</p> 
                         </div>
+                        <div class="center-content padding-top-ten padding-bottom-thirty">
                             <p id="caption" class="caption">
                                 ID: 20819176 | Checked In: Yes | Hacker
                             </p>
@@ -50,11 +60,11 @@
                     </div>
                 </div>
                 <div id="information" class="info">
-                    <!-- only for hackers -->
                     <p class="center-content information-title padding-top-fifty padding-bottom-thirty">
                         INFORMATION
                     </p>
-                    <div class="margin-top-thirty margin-bottom-thirty">
+                    <!-- only for hackers -->
+                    <div id="hacker" class="margin-top-thirty margin-bottom-thirty">
                         <p class="attended-title padding-left-thirty">
                             Workshops Attended:
                         </p>
@@ -63,7 +73,7 @@
                         </p>
                     </div>
                     <!-- only for sponsors -->
-                    <div class="margin-top-thirty margin-bottom-thirty">
+                    <div id="sponsor" class="margin-top-thirty margin-bottom-thirty">
                         <p class="attended-title padding-left-thirty">
                             Sponsor Company:
                         </p>
@@ -73,22 +83,22 @@
                         <p class="attended-title margin-top-thirty padding-left-thirty">
                             Sponsor Company Link:
                         </p>
-                        <p id="company-link" class="attended-num center-content">
+                        <p id="company-link" class="sponsor-link center-content">
                             <a href="www.google.com">google.com</a>
                             <!-- add the link too!!! -->
                         </p>
                     </div>
                     <!-- only for volunteers -->
-                    <div class="margin-top-thirty margin-bottom-thirty">
+                    <div id="volunteer" class="margin-top-thirty margin-bottom-thirty">
                         <p class="attended-title padding-left-thirty">
                             Next Shift:
                         </p>
-                        <p id="next-shift" class="phone-date center-content">
+                        <p id="next-shift" class="shift-date center-content">
                             02/20 04:00 - 06:00
                         </p>
                     </div>
                     <!-- only for organizers -->
-                    <div class="margin-top-thirty margin-bottom-thirty">
+                    <div id="organizer" class="margin-top-thirty margin-bottom-thirty">
                         <p class="attended-title padding-left-thirty">
                             Phone Number:
                         </p>
@@ -100,8 +110,8 @@
                 <div class="center-content padding-bottom-thirty">
                     <p class="action-title padding-top-thirty padding-bottom-thirty">ACTIONS</p>
                     <a class="gradient-button gradient-button-1">Check In</a><br />
-                    <a class="gradient-button gradient-button-2">Attend Workshop</a><br />
-                    <a class="gradient-button gradient-button-3">Call Phone</a><br />
+                    <a id="workshop" class="gradient-button gradient-button-2">Attend Workshop</a><br />
+                    <a id="call" class="gradient-button gradient-button-3">Call Phone</a><br />
                 </div>
             </div>
         </div>
