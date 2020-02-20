@@ -54,10 +54,13 @@ window.addEventListener('load', function () {
     document.getElementById("pfp").src = test.profile_pic;
     document.getElementById("name").innerHTML = test.name;
     if (test.checked_in == true){
-        document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
+        document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type[0].toUpperCase() + test.type.slice(1);
     }
     else if(test.checked_in == false){
-        document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: Yes | " + test.type;
+        document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: No | " + test.type[0].toUpperCase() + test.type.slice(1);
+    }
+    else{
+        document.getElementById("caption").innerHTML = "ID: " + test.id + " | " + test.type[0].toUpperCase() + test.type.slice(1);
     }
     // document.getElementById("caption").innerHTML = "ID: " + test.id + " | Checked In: " + test.checked_in + " | " + test.type;
     document.getElementById("bio").innerHTML = test.bio;
