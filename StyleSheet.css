@@ -37,6 +37,16 @@ a{
     background-image: linear-gradient(to bottom right, #F1A8A3, #4CB1D4);
 }
 
+#login{
+    display: none;
+    color: rgb(136, 25, 25);
+    font-family: myriad-pro, sans-serif;
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin: -15px 0 3px 0;
+}
+
 #logo{
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */
@@ -185,6 +195,23 @@ input[type=text]{
     padding-left: 40px;
 }
 
+input[type=password]{
+    width: 85%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 0.5px solid grey;
+    margin: 10px 0;
+    padding: 10px 0;
+    background: transparent;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    letter-spacing: 2px;
+    /* background-image: url(/user.png); */
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
 .input-icons i {
     position: absolute;
     margin-top: 20px;
@@ -306,6 +333,14 @@ input[type=text]{
 
 
 /* MAIN PAGE */
+
+#null-profile{
+    display: none;
+}
+
+#profile{
+    display: none;
+}
 
 .action-title{
     /* color: #1a4961; */
